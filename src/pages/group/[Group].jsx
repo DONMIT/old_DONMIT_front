@@ -9,6 +9,8 @@ const Group = () => {
   return(
     <>
       <GroupHeader group_name={group_name}/>
+      
+      
     </>
   )
 }
