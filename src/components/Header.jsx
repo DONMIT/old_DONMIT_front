@@ -10,7 +10,9 @@ const Header = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className="header_bar">
-        
+        <ul>
+          <li></li>
+        </ul>
       </header>   
     </>
   )
