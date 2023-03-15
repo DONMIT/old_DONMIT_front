@@ -1,47 +1,12 @@
 {
-  "DropMenu": {
-    "noRecordsFound": "기록 없음",
-    "showingPage": "Mostrando página {0} de {1} entradas",
-    "show": "보기",
-    "entries": "항목",
-    "insertANewColumnBefore": "이전 열 추가",
-    "insertANewColumnAfter": "다음 열 추가",
-    "deleteSelectedColumns": "해당 열 삭제",
-    "renameThisColumn": "해당 헤더 이름 변경",
-    "orderAscending": "오름차순 정렬",
-    "orderDescending": "내림차순 정렬",
-    "insertANewRowBefore": "이전 행 추가",
-    "insertANewRowAfter": "다음 행 추가",
-    "deleteSelectedRows": "해당 행 삭제",
-    "editComments": "코멘트 수정",
-    "addComments": "코멘트 달기",
-    "comments": "코멘트",
-    "clearComments": "코멘트 지우기",
-    "copy": "복사",
-    "paste": "붙여넣기",
-    "saveAs": "csv로 저장하기",
-    "areYouSureToDeleteTheSelectedRows": "선택한 행을 삭제하시겠습니까?",
-    "areYouSureToDeleteTheSelectedColumns": "선택한 열을 삭제하시겠습니까?",
-    "thisActionWillDestroyAnyExistingMergedCellsAreYouSure": "이 작업은 기존의 병합된 셀을 모두 제거합니다. 계속하시겠습니까?",
-    "thisActionWillClearYourSearchResultsAreYouSure": "이 작업을 수행하면 검색 결과가 지워집니다. 계속하시겠습니까?",
-    "thereIsAConflictWithAnotherMergedCell": "병합된 다른 셀과 충돌이 있습니다.",
-    "invalidMergeProperties": "잘못된 병합 속성입니다.",
-    "cellAlreadyMerged": "이미 병합된 셀 입니다.",
-    "noCellsSelected": "선택된 셀이 없습니다."
+  "header": {},
+  "group": {
+    "tabmenu_name": {
+      "menu_1": "그룹 통계",
+      "menu_2": "그룹원 목록",
+      "menu_3": "그룹 관리",
+      "menu_4": "가입신청 목록"
+    }
   },
-  "TableLog": {
-    "changed": {
-      "a": " 의 셀 값 변경이 감지되었습니다.",
-      "b": "변경된 값 : "
-    },
-    "beforeChange": {
-      "a": "셀의 값이 변경되었습니다.",
-      "b": "변경된 값 : "
-    },
-    "insertedRow": "행이 추가되었습니다.\n",
-    "insertedColumn": "열이 추가되었습니다.\n",
-    "deletedRow": "행이 삭제되었습니다.\n",
-    "deletedColumn": "열이 삭제되었습니다.\n",
-    "loaded": "새로운 데이터가 로딩되었습니다.\n"
-  }
+  "user": {}
 }

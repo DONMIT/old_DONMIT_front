@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       <div>Front Source</div>
       <Link
-        href={{ pathname: `group/Group`, query: { name: "DONMIT_GROUP" } }}
+        href={{ pathname: `group/Group`, query: { name: "DONMIT_GROUP_NAME" } }}
         as={"group/Group"}
       >
         Test Link (그룹명 : DONMIT_GROUP)

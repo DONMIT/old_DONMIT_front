@@ -1,47 +1,12 @@
 {
-  "DropMenu": {
-    "noRecordsFound": "No Records Found",
-    "showingPage": "Showing Page",
-    "show": "Show",
-    "entries": "Entries",
-    "insertANewColumnBefore": "Insert A New Column Before",
-    "insertANewColumnAfter": "Insert A New Column After",
-    "deleteSelectedColumns": "Delete Selected Columns",
-    "renameThisColumn": "Rename This Column",
-    "orderAscending": "Order Ascending",
-    "orderDescending": "Oorder Descending",
-    "insertANewRowBefore": "Insert A NewRow Before",
-    "insertANewRowAfter": "Insert A NewRow After",
-    "deleteSelectedRows": "Delete Selected Rows",
-    "editComments": "Edit Comments",
-    "addComments": "Add Comments",
-    "comments": "Comments",
-    "clearComments": "Clear Comments",
-    "copy": "Copy",
-    "paste": "Paste",
-    "saveAs": "Save As",
-    "areYouSureToDeleteTheSelectedRows": "Are You Sure To Delete The Selected Rows?",
-    "areYouSureToDeleteTheSelectedColumns": "Are You Sure To Delete The Selected Columns?",
-    "thisActionWillDestroyAnyExistingMergedCellsAreYouSure": "This Action Will Destroy Any Existing Merged Cells. Are You Sure?",
-    "thisActionWillClearYourSearchResultsAreYouSure": "This Action Will Clear Your Search Results. Are You Sure?",
-    "thereIsAConflictWithAnotherMergedCell": "There Is A Conflict With Another Merged Cell.",
-    "invalidMergeProperties": "Invalid Merge Properties.",
-    "cellAlreadyMerged": "Cell Already Merged.",
-    "noCellsSelected": "No Cells Selected."
+  "header": {},
+  "group": {
+    "tabmenu_name": {
+      "menu_1": "Group Info",
+      "menu_2": "Menber List",
+      "menu_3": "Group Setting",
+      "menu_4": "Registration applications"
+    }
   },
-  "TableLog": {
-    "changed": {
-      "a": "New change on cell ",
-      "b": "to "
-    },
-    "beforeChange": {
-      "a": "The cell ",
-      "b": "will be changed\n"
-    },
-    "insertedRow": "Row added\n",
-    "insertedColumn": "Column added\n",
-    "deletedRow": "Row deleted\n",
-    "deletedColumn": "Column deleted\n",
-    "loaded": "New data is loaded\n"
-  }
+  "user": {}
 }
