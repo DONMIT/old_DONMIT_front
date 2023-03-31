@@ -18,12 +18,19 @@ export default function Home() {
       </Head>
       <div>Front Source</div>
       <Link
-        href={{ pathname: `group/Group`, query: { name: "DONMIT_GROUP_NAME" } }}
+        href={{ pathname: `group/Group`, query: { name: "DONMIT_GROUP_NAME", page_type: "group" } }}
         as={"group/Group"}
       >
         Test Link (그룹명 : DONMIT_GROUP)
         {/* ReadMe Test */}
         <UserReadMe />
+      </Link>
+      <hr/>
+      <Link 
+        href={{ pathname: `user/Users`, query: { name: "USER_INFO", page_type: "user"} }}
+        as={"user/Users"}
+      >
+        사용자 정보 페이지 가보기
       </Link>
     </>
   );

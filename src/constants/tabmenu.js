@@ -1,6 +1,6 @@
 import { t } from "i18next";
 
-const TabMenu = [
+const GroupTabMenu = [
   {
     title: `${t("group.tabmenu_name.menu_1")}`,
     roles: 0,
@@ -23,6 +23,18 @@ const TabMenu = [
   },
 ];
 
-const TabMenuList = { TabMenu };
+const UserTabMenu = [
+  {
+    title: `${t("user.tabmenu_name.menu_1")}`,
+  },
+  {
+    title: `${t("user.tabmenu_name.menu_1")}`,
+  }
+];
+
+const TabMenuList = { 
+  GroupTabMenu,
+  UserTabMenu
+};
 
 export default TabMenuList;

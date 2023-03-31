@@ -8,5 +8,9 @@
       "menu_4": "Registration applications"
     }
   },
-  "user": {}
+  "user": {
+    "tabmenu_name": {
+      "menu_1": "User Info"
+    }
+  }
 }

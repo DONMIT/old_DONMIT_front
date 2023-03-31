@@ -11,6 +11,15 @@ import GroupContents from "@/components/group/GroupContents";
 const Group = () => {
   const router = useRouter();
   const group_name = router.query.name;
+
+  useEffect(() => {
+  //   {group_name === undefined ?
+  //   sessionStorage.setItem("page_info",JSON.stringify(router.query.page_type))
+  //   :
+  //   "group"
+  // }
+  sessionStorage.setItem("page_info","group")
+  },)
   
   // const setGithubUser = useSetRecoilState(GithubUserState);
 

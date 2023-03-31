@@ -40,3 +40,10 @@ yarn dev
 | ---- | ---- | ----- | ------ |
 | int  | type | 0     | 공개   |
 | int  | type | 1     | 비공개 |
+
+## API Server
+- 실행순서
+1. Docker-Compose 실행
+```console
+docker-compose up
+```

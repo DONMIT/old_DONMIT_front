@@ -1,8 +1,8 @@
 import { atom } from "recoil";
 
 const GroupTabState = atom({
-  key: "tabmenu",
-  default: 1,
+  key: "tabmenuindex",
+  default: 0,
 });
 
 export { GroupTabState };
