@@ -1,12 +1,15 @@
+import { useRouter } from "next/router";
 const { default: Footer } = require("@/components/include/Footer")
 const { default: Header } = require("@/components/include/Header")
 
 const Layout = ({children}) => {
+  const router = useRouter();
+  const pathName = router.pathname;
   return(
     <>
-      <Header/>
+      {pathName === "/404" || pathName === "/_error" ? null : <Header/>}
         {children}
-      <Footer/>
+      {pathName === "/404" || pathName === "/_error" ? null : <Footer/>}
     </>
   )
 }
