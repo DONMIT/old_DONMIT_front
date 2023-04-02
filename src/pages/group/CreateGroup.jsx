@@ -1,15 +1,22 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { t } from "i18next";
 
 import GroupOption from "@/constants/groupoption";
 
+import ProfileImage from "@/components/common/ProfileImage";
 import Input from "@/components/common/Input";
 import Button from "@/components/common/Button";
 import Radio from "@/components/common/Radio";
 import Select from "@/components/common/Select";
-import Image from "next/image";
+
+import Empty from "public/assets/empty.png";
+import DropFile from "@/components/common/DropFile";
 
 const CreateGroup = () => {
+  // Group Thumbnail
+  const [ thumbnail, setThumbnail ] = useState(false);
+  const ImageId = useRef(Number);
+  const DragRef = useRef(null);
   // Group Title
   const [ groupTitle, setGroupTitle ] = useState("");
   const onChangeGroupTitle = (e) => {
@@ -37,9 +44,8 @@ const CreateGroup = () => {
   return(
     <div className="create_group_form">
       <div className="group_thumbnail flex flex_ai_c">
-        <div className="img_box">
-          <Image src="" alt=""/>
-        </div>
+        <ProfileImage images={Empty}/>
+        <DropFile/>
       </div>
       <div className="group_name flex flex_ai_c">
         <div className="input_title">{t("group.group_option.group_name")}</div>

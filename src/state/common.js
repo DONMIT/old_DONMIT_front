@@ -10,4 +10,7 @@ const LanguageState = atom({
   default: 0,
 });
 
-export { ModeState };
+export { 
+  ModeState,
+  LanguageState
+};
