@@ -5,4 +5,21 @@ const GroupTabState = atom({
   default: 0,
 });
 
-export { GroupTabState };
+const CreateGroupState = atom({
+  key: "creategroup",
+  default: {
+    groupTitle: "",
+    groupIntro: "",
+    groupVisibility: true,
+    groupSize: Number,
+    groupJoin: true,
+    groupCommit: Number,
+    groupFine: 100,
+    groupDistribution: true
+  }
+});
+
+export { 
+  GroupTabState,
+  CreateGroupState
+};

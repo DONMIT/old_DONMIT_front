@@ -1,9 +1,9 @@
-const Select = ({values}) => {
+const Select = ({arrItem, types, value, txt, onChange, id, name}) => {
   return(
     <>
-      <select name="" id="">
-        {values.map((items, index) =>
-          <option value={items} key={index}>{items.number}</option>
+      <select name={name} id={id} onChange={onChange}>
+        {arrItem.map((items, index) =>
+          <option value={items.value} key={index}>{items.number}</option>
         )}
       </select>
     </>

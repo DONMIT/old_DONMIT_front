@@ -1,10 +1,16 @@
 import Head from "next/head";
+import { useRecoilValue } from "recoil";
 import { useRouter } from "next/router";
+
+import { CreateGroupState } from "@/state/groupState";
 import ModeSetting from "./ModeSetting";
 
 const Header = () => {
   const router = useRouter();
   const PageTitle = router.query.name;
+
+  const Test = useRecoilValue(CreateGroupState);
+  console.log("테스트 코드",Test)
   return(
     <>
       <Head>
