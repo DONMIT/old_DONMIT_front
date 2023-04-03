@@ -15,11 +15,11 @@ const GroupContents = () => {
       <div className="group_contents">
         <TabButton/>
         <div className="tab_contents relative">
-          {TabNum === 1 ?
+          {TabNum === 0 ?
             <GroupStatistics/> :
-            (TabNum === 2 ?
+            (TabNum === 1 ?
               <GroupMenber/> :
-              (TabNum === 3 ? 
+              (TabNum === 2 ? 
                 <GroupSetting/> 
                 :
                 <GroupJoinUserList/>  

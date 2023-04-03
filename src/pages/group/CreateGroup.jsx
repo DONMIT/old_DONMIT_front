@@ -1,4 +1,3 @@
-import { useState, useRef } from "react";
 import { useRecoilState } from "recoil";
 import { t } from "i18next";
 
@@ -25,7 +24,6 @@ const CreateGroup = () => {
     } else if (name === "groupVisibility" || name === "groupJoin" || name === "groupDistribution") {
       newValue = (value === "true");
     }
-  
     setCreateGroup({
       ...createGroup,
       [name]: newValue,

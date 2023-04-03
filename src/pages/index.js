@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import Link from "next/link";
 import UserReadMe from "@/components/markdown/UserReadMe";
+import Search from "@/components/common/Search";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>Front Source</div>
+      <Search/>
+      <hr/>
       <Link
         href={{ pathname: `group/Group`, query: { name: "DONMIT_GROUP_NAME", page_type: "group" } }}
         as={"group/Group"}

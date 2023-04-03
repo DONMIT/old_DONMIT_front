@@ -1,4 +1,5 @@
-const Input = ({types, value, onChange, txt, label, id, name, step}) => {
+const Input = ({styles, types, value, defaultValue, onChange, txt, label, id, name, readOnly, step}) => {
+  console.log(defaultValue)
   return(
     <>
       {
@@ -7,7 +8,7 @@ const Input = ({types, value, onChange, txt, label, id, name, step}) => {
         :
         null
       }
-      <input type={types === null ? "text" : types} value={value} onChange={onChange} id={id} name={name} step={step}/>
+      <input className={`${styles} ${readOnly === true ? "read_only" : ""}`} type={types === null ? "text" : types} value={value} defaultValue={defaultValue} onChange={onChange} id={id} name={name} readOnly={readOnly === true ? true : false} step={step}/>
     </>
   )
 }

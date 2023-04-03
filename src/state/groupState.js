@@ -11,15 +11,23 @@ const CreateGroupState = atom({
     groupTitle: "",
     groupIntro: "",
     groupVisibility: true,
-    groupSize: Number,
+    groupSize: 20,
     groupJoin: true,
-    groupCommit: Number,
+    groupCommit: 5,
     groupFine: 100,
     groupDistribution: true
   }
 });
 
+const GetGroupInfoState = atom({
+  key: "groupinfo",
+  default: {
+    groupTitle: "그룹명 테스트"
+  }
+})
+
 export { 
   GroupTabState,
-  CreateGroupState
+  CreateGroupState,
+  GetGroupInfoState
 };
