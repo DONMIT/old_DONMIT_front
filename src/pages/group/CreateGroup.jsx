@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { useRecoilState } from "recoil";
 import { t } from "i18next";
 
@@ -15,7 +16,9 @@ import DropFile from "@/components/common/DropFile";
 import Empty from "public/assets/empty.png";
 
 const CreateGroup = () => {
+  const router = useRouter();
   const [ createGroup, setCreateGroup ] = useRecoilState(CreateGroupState);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     let newValue = value;
@@ -28,6 +31,10 @@ const CreateGroup = () => {
       ...createGroup,
       [name]: newValue,
     });
+  };
+
+  const handleHistoryBack = () => {
+    router.push('/')
   };
 
   return(
@@ -79,7 +86,7 @@ const CreateGroup = () => {
       </div>
       <div className="btn_box flex flex_jc_sb">
         <Button txt={t("common.create")}/>
-        <Button txt={t("common.cancel")}/>
+        <Button txt={t("common.cancel")} event={handleHistoryBack}/>
       </div>
     </div>
   )

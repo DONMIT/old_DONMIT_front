@@ -4,6 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import UserReadMe from "@/components/markdown/UserReadMe";
 import Search from "@/components/common/Search";
+import ChartComponent from "@/components/chart/Chart";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -35,8 +36,8 @@ export default function Home() {
         사용자 정보 페이지 가보기
       </Link>
       <hr/>
-      <Link
-        href={"group/CreateGroup"}>그룹생성</Link>
+      <Link href={"group/CreateGroup"}>그룹생성</Link>
+
     </>
   );
 }
