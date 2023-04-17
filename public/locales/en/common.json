@@ -1,3 +1,36 @@
 {
-  "test":"tests"
+  "common":{
+    "back": "Back",
+    "create": "Create",
+    "cancel": "Cancel",
+    "public": "Public",
+    "private": "Private",
+    "auto_join": "Auto join",
+    "manager_approval": "Manager Approval"
+  },
+  "header": {},
+  "group": {
+    "group_option":{
+      "button": "Create Group",
+      "group_name": "Group Name",
+      "group_intro": "Group Intro",
+      "group_size": "Group Size",
+      "group_visibility": "Group Visibility",
+      "group_join_method": "Join Method",
+      "group_commit_count": "Commit Count",
+      "group_fine": "Fine",
+      "group_distribution": "Penalty Distribution Method"
+    },
+    "tabmenu_name": {
+      "menu_1": "Group Info",
+      "menu_2": "Menber List",
+      "menu_3": "Group Setting",
+      "menu_4": "Registration applications"
+    }
+  },
+  "user": {
+    "tabmenu_name": {
+      "menu_1": "User Info"
+    }
+  }
 }

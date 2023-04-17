@@ -1,3 +1,38 @@
 {
-  "test":"테스트"
+  "common": {
+    "back": "뒤로가기",
+    "create": "생성",
+    "cancel": "취소",
+    "public": "공개",
+    "private": "비공개",
+    "auto_join": "자동 가입",
+    "manager_approval": "관리자 승인",
+    "ranking": "랭킹 순위",
+    "even": "전체"
+  },
+  "header": {},
+  "group": {
+    "group_option": {
+      "button": "그룹 만들기",
+      "group_name": "그룹명",
+      "group_intro": "그룹소개",
+      "group_size": "그룹인원",
+      "group_visibility": "그룹공개",
+      "group_join_method": "가입방식",
+      "group_commit_count": "커밋횟수",
+      "group_fine": "벌금",
+      "group_distribution": "벌금 분배방식"
+    },
+    "tabmenu_name": {
+      "menu_1": "그룹 통계",
+      "menu_2": "그룹원 목록",
+      "menu_3": "그룹 관리",
+      "menu_4": "가입신청 목록"
+    }
+  },
+  "user": {
+    "tabmenu_name": {
+      "menu_1": "사용자 정보"
+    }
+  }
 }

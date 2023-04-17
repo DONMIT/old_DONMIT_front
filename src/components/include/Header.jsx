@@ -12,8 +12,7 @@ const Header = () => {
   const PageTitle = router.query.name;
 
   const Test = useRecoilValue(CreateGroupState);
-  console.log("테스트 코드",Test)
-  const { i18n, t } = useTranslation('common'); 
+  const { t } = useTranslation('common'); 
   return(
     <>
       <Head>
@@ -26,7 +25,7 @@ const Header = () => {
         <ul className="flex flex_jc_sb flex_basis_100">
           <li className="logo">
             여기는 로고가 들어가겠죠? 아마도 그렇겠죠?
-            {t('test')}
+            {t('common.back')}
           </li>
           <li title="이건 프로젝트 다크모드버튼입니다. 일단 만들어놨어요. 퍼블은 나중에!">
             <ModeSetting/>
