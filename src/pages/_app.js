@@ -6,7 +6,9 @@ import Layout from "./Layout";
 import "@/styles/globals.css";
 import "@/styles/_index.scss";
 
-export default function App({ Component, pageProps }) {
+import { appWithTranslation } from 'next-i18next';
+
+function App({ Component, pageProps }) {
   return (
     <RecoilRoot>
       <Layout>
@@ -15,3 +17,5 @@ export default function App({ Component, pageProps }) {
     </RecoilRoot>
   );
 }
+
+export default appWithTranslation(App);

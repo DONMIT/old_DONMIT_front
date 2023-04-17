@@ -1,13 +1,14 @@
 import Head from "next/head";
-// import { Inter } from "@next/font/google";
 
 import Link from "next/link";
 import UserReadMe from "@/components/markdown/UserReadMe";
 import Search from "@/components/common/Search";
 
-// const inter = Inter({ subsets: ["latin"] });
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 export default function Home() {
+  const { t } = useTranslation('common');
   return (
     <>
       <Head>
@@ -16,7 +17,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>Front Source</div>
+      <div>{t('test')}</div>
       <Search/>
       <hr/>
       <Link
@@ -39,4 +40,11 @@ export default function Home() {
         href={"group/CreateGroup"}>그룹생성</Link>
     </>
   );
+}
+export async function getServerSideProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
 }

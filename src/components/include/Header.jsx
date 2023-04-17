@@ -5,12 +5,15 @@ import { useRouter } from "next/router";
 import { CreateGroupState } from "@/state/groupState";
 import ModeSetting from "./ModeSetting";
 
+import { useTranslation } from 'next-i18next';
+
 const Header = () => {
   const router = useRouter();
   const PageTitle = router.query.name;
 
   const Test = useRecoilValue(CreateGroupState);
   console.log("테스트 코드",Test)
+  const { i18n, t } = useTranslation('common'); 
   return(
     <>
       <Head>
@@ -23,6 +26,7 @@ const Header = () => {
         <ul className="flex flex_jc_sb flex_basis_100">
           <li className="logo">
             여기는 로고가 들어가겠죠? 아마도 그렇겠죠?
+            {t('test')}
           </li>
           <li title="이건 프로젝트 다크모드버튼입니다. 일단 만들어놨어요. 퍼블은 나중에!">
             <ModeSetting/>
@@ -32,5 +36,12 @@ const Header = () => {
     </>
   )
 }
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    // common 은 위 locales/ko 아래에 만든 json 파일 명이다. 다른 파일을 사용한다면 바꿔주자.
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});
 
 export default Header;
