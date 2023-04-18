@@ -1,14 +1,14 @@
 import Head from "next/head";
-// import { Inter } from "@next/font/google";
 
 import Link from "next/link";
 import UserReadMe from "@/components/markdown/UserReadMe";
 import Search from "@/components/common/Search";
-import ChartComponent from "@/components/chart/Chart";
 
-// const inter = Inter({ subsets: ["latin"] });
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function Home() {
+  const { t } = useTranslation('common');
   return (
     <>
       <Head>
@@ -17,7 +17,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>Front Source</div>
       <Search/>
       <hr/>
       <Link
@@ -36,8 +35,16 @@ export default function Home() {
         사용자 정보 페이지 가보기
       </Link>
       <hr/>
-      <Link href={"group/CreateGroup"}>그룹생성</Link>
-
+      <Link href={"group/CreateGroup"}>{t("group.group_option.button")}</Link>
     </>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+      // Will be passed to the page component as props
+    },
+  };
 }

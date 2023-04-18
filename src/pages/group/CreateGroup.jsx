@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useRecoilState } from "recoil";
-import { t } from "i18next";
+// import { t } from "i18next";
 
 import GroupOption from "@/constants/groupoption";
 
@@ -15,7 +15,11 @@ import DropFile from "@/components/common/DropFile";
 
 import Empty from "public/assets/empty.png";
 
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 const CreateGroup = () => {
+  const { t } = useTranslation('common');
   const router = useRouter();
   const [ createGroup, setCreateGroup ] = useRecoilState(CreateGroupState);
 
@@ -90,6 +94,15 @@ const CreateGroup = () => {
       </div>
     </div>
   )
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+      // Will be passed to the page component as props
+    },
+  };
 }
 
 export default CreateGroup;

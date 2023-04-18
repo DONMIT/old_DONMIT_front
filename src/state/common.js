@@ -10,7 +10,13 @@ const LanguageState = atom({
   default: 0,
 });
 
+const LanguagePopupState = atom({
+  key: "langpopup",
+  default: false
+})
+
 export { 
   ModeState,
-  LanguageState
+  LanguageState,
+  LanguagePopupState
 };
