@@ -1,5 +1,6 @@
 import { RecoilRoot } from "recoil";
 
+import { appWithTranslation } from "next-i18next";
 import "@/lang/i18n";
 import Layout from "./Layout";
 
@@ -18,4 +19,5 @@ function App({ Component, pageProps }) {
   );
 }
 
+export default appWithTranslation(App);
 export default appWithTranslation(App);

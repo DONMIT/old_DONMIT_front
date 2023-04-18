@@ -1,5 +1,6 @@
+import { useRouter } from "next/router";
 import { useRecoilState } from "recoil";
-import { t } from "i18next";
+// import { t } from "i18next";
 
 import GroupOption from "@/constants/groupoption";
 
@@ -14,8 +15,14 @@ import DropFile from "@/components/common/DropFile";
 
 import Empty from "public/assets/empty.png";
 
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 const CreateGroup = () => {
+  const { t } = useTranslation('common');
+  const router = useRouter();
   const [ createGroup, setCreateGroup ] = useRecoilState(CreateGroupState);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     let newValue = value;
@@ -28,6 +35,10 @@ const CreateGroup = () => {
       ...createGroup,
       [name]: newValue,
     });
+  };
+
+  const handleHistoryBack = () => {
+    router.push('/')
   };
 
   return(
@@ -79,10 +90,19 @@ const CreateGroup = () => {
       </div>
       <div className="btn_box flex flex_jc_sb">
         <Button txt={t("common.create")}/>
-        <Button txt={t("common.cancel")}/>
+        <Button txt={t("common.cancel")} event={handleHistoryBack}/>
       </div>
     </div>
   )
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+      // Will be passed to the page component as props
+    },
+  };
 }
 
 export default CreateGroup;

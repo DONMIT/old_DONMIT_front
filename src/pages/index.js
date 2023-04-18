@@ -4,8 +4,8 @@ import Link from "next/link";
 import UserReadMe from "@/components/markdown/UserReadMe";
 import Search from "@/components/common/Search";
 
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function Home() {
   const { t } = useTranslation('common');
@@ -17,7 +17,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>{t('common.back')}</div>
       <Search/>
       <hr/>
       <Link
@@ -36,15 +35,16 @@ export default function Home() {
         사용자 정보 페이지 가보기
       </Link>
       <hr/>
-      <Link
-        href={"group/CreateGroup"}>그룹생성</Link>
+      <Link href={"group/CreateGroup"}>{t("group.group_option.button")}</Link>
     </>
   );
 }
-export async function getServerSideProps({ locale }) {
+
+export async function getStaticProps({ locale }) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ['common'])),
+      // Will be passed to the page component as props
     },
   };
 }

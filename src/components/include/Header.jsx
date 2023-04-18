@@ -1,18 +1,26 @@
 import Head from "next/head";
+import Image from "next/image";
 import { useRecoilValue } from "recoil";
 import { useRouter } from "next/router";
-
-import { CreateGroupState } from "@/state/groupState";
-import ModeSetting from "./ModeSetting";
-
 import { useTranslation } from 'next-i18next';
 
+import { CreateGroupState } from "@/state/groupState";
+import { LoginState } from "@/state/loginState";
+import ModeSetting from "./ModeSetting";
+
+import Empty from "public/assets/empty.png";
+import LanguageSetting from "./LanguageSetting";
+import Button from "../common/Button";
+
 const Header = () => {
+  const { t } = useTranslation('common');
   const router = useRouter();
   const PageTitle = router.query.name;
 
   const Test = useRecoilValue(CreateGroupState);
-  const { t } = useTranslation('common'); 
+  const isLogin = useRecoilValue(LoginState);
+
+  console.log("테스트 코드",Test)
   return(
     <>
       <Head>
@@ -22,13 +30,30 @@ const Header = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className="header_bar">
-        <ul className="flex flex_jc_sb flex_basis_100">
+        <ul className="flex flex_jc_sb flex_ai_c flex_basis_100">
           <li className="logo">
-            여기는 로고가 들어가겠죠? 아마도 그렇겠죠?
-            {t('common.back')}
+            <Image src={Empty} alt="" width={40} height={40}/>
+          </li>
+          <li className="rank_menu">
+            
           </li>
           <li title="이건 프로젝트 다크모드버튼입니다. 일단 만들어놨어요. 퍼블은 나중에!">
             <ModeSetting/>
+          </li>
+          <li className="lang">
+            <LanguageSetting/>
+          </li>
+          <li>
+            {isLogin === true ?
+              <>
+                <Button txt={"User ID"}/>
+                <div className="thumb">
+                  <Image src={Empty} alt="" width={40} height={40}/>
+                </div>
+              </>
+              :
+              <Button txt={t("header.button")}/>
+            }
           </li>
         </ul>
       </header>   

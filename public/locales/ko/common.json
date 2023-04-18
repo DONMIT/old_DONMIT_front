@@ -10,7 +10,17 @@
     "ranking": "랭킹 순위",
     "even": "전체"
   },
-  "header": {},
+  "header": {
+    "menu_1": {
+      "title": "랭킹메뉴"
+    },
+    "menu_2": {
+      "title": "언어변경",
+      "kor": "한국어",
+      "eng": "English"
+    },
+    "button": "로그인"
+  },
   "group": {
     "group_option": {
       "button": "그룹 만들기",
@@ -34,5 +44,6 @@
     "tabmenu_name": {
       "menu_1": "사용자 정보"
     }
-  }
+  },
+  "test":"테스트"
 }

@@ -8,7 +8,17 @@
     "auto_join": "Auto join",
     "manager_approval": "Manager Approval"
   },
-  "header": {},
+    "header": {
+    "menu_1": {
+      "title": "Ranking Menu"
+    },
+    "menu_2": {
+      "title": "Laguage",
+      "kor": "Korean",
+      "eng": "English"
+    },
+    "button": "Login"
+  },
   "group": {
     "group_option":{
       "button": "Create Group",
