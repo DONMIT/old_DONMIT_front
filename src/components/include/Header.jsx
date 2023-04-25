@@ -11,6 +11,7 @@ import ModeSetting from "./ModeSetting";
 import Empty from "public/assets/empty.png";
 import LanguageSetting from "./LanguageSetting";
 import Button from "../common/Button";
+import Link from "next/link";
 
 const Header = () => {
   const { t } = useTranslation('common');
@@ -46,13 +47,13 @@ const Header = () => {
           <li>
             {isLogin === true ?
               <>
-                <Button txt={"User ID"}/>
+                <Link href={{ pathname: `mypage/MyPage`, query: { name: "USER_ID", page_type: "user"}}} as={"mypage/UserID"}>User ID</Link>
                 <div className="thumb">
                   <Image src={Empty} alt="" width={40} height={40}/>
                 </div>
               </>
               :
-              <Button txt={t("header.button")}/>
+              <Link href={{ pathname: `login/Login`}}>{t("header.button")}</Link>
             }
           </li>
         </ul>
