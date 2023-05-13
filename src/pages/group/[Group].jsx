@@ -31,4 +31,9 @@ const Group = () => {
   )
 }
 
+// export const getStaticProps = async ({ locale }) => ({
+//   props: {
+//     ...(await serverSideTranslations(locale, ["common"])),
+//   },
+// });
 export default Group;

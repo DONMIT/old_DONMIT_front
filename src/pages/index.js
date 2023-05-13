@@ -17,25 +17,27 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Search/>
-      <hr/>
-      <Link
-        href={{ pathname: `group/Group`, query: { name: "DONMIT_GROUP_NAME", page_type: "group" } }}
-        as={"group/Group"}
-      >
-        Test Link (그룹명 : DONMIT_GROUP)
-        {/* ReadMe Test */}
-        <UserReadMe />
-      </Link>
-      <hr/>
-      <Link 
-        href={{ pathname: `user/Users`, query: { name: "USER_INFO", page_type: "user"} }}
-        as={"user/Users"}
-      >
-        사용자 정보 페이지 가보기
-      </Link>
-      <hr/>
-      <Link href={"group/CreateGroup"}>{t("group.group_option.button")}</Link>
+      <div className="con">
+        <Search/>
+        <hr/>
+        <Link
+          href={{ pathname: `group/Group`, query: { name: "DONMIT_GROUP_NAME", page_type: "group" } }}
+          as={"group/Group"}
+        >
+          Test Link (그룹명 : DONMIT_GROUP)
+          {/* ReadMe Test */}
+          <UserReadMe />
+        </Link>
+        <hr/>
+        <Link 
+          href={{ pathname: `user/Users`, query: { name: "USER_INFO", page_type: "user"} }}
+          as={"user/Users"}
+        >
+          사용자 정보 페이지 가보기
+        </Link>
+        <hr/>
+        <Link href={"group/CreateGroup"}>{t("group.group_option.button")}</Link>
+      </div>
     </>
   );
 }

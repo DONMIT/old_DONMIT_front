@@ -21,7 +21,6 @@ const Header = () => {
   const Test = useRecoilValue(CreateGroupState);
   const isLogin = useRecoilValue(LoginState);
 
-  console.log("테스트 코드",Test)
   return(
     <>
       <Head>
@@ -33,7 +32,9 @@ const Header = () => {
       <header className="header_bar">
         <ul className="flex flex_jc_sb flex_ai_c flex_basis_100">
           <li className="logo">
-            <Image src={Empty} alt="" width={40} height={40}/>
+            <Link href={"/"}>
+              <Image src={Empty} alt="" width={40} height={40}/>
+            </Link>
           </li>
           <li className="rank_menu">
             
